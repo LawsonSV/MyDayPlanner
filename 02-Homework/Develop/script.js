@@ -4,22 +4,11 @@ let timeBlock = $(".time-block");
 let rowContent = $(".row-content");
 let saveBtn = $(".saveBtn");
 let sixBtn = $("#6-btn");
+let block0 = $("block-0");
 
 dayText.append(today)
 
-//timeBlock.css("background-color", "red")
-function createItem() {
-    for (i = 0; i < rowContent.length; i++) {
-    localStorage.setItem(rowContent[i], JSON.stringify(rowContent[i].value));
-  }
-}
-  /*function readValue() {
-    var x = sessionStorage.getItem("test1");
-    rowContent.innerHTML = rowContent.textContent;
-  }*/
-
-  for (i = 0; i < saveBtn.length; i++)
-
+console.log(moment().format("H"))
 
 saveBtn.click(function () {
         let rowText1 = $("#hour-1").val();
@@ -90,19 +79,20 @@ saveBtn.click(function () {
     $("#hour-16").val(rowDetails16);
 
   function colorTime()
-  {for (i = 0; i <= 24; i++) {
+  {for (i = 0; i < timeBlock.length; i++) {
     
-    if (moment().format("h:mm") === timeBlock[i]) {
+    if (moment().format("H") === timeBlock[i].getAttribute("number")) {
         $(timeBlock[i]).css("background-color", "red")
         
     }
-    else if (moment().format("h:mm") > timeBlock[i]) {
+    else if (moment().format("H") > timeBlock[i].getAttribute("number")) {
         $(timeBlock[i]).css("background-color", "green")
     }
-    else {
+    else if (moment().format("H") < timeBlock[i].getAttribute("number")) {
         $(timeBlock[i]).css("background-color", "grey")
     }
 }
 }
 
 colorTime()
+
