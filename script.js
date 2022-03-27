@@ -4,8 +4,7 @@ let timeBlock = $(".time-block");
 let rowContent = $(".row-content");
 let saveBtn = $(".saveBtn");
 let sixBtn = $("#6-btn");
-let block0 = $("block-0");
-currentHour = parseInt(moment().format("H"))
+let currentHour = parseInt(moment().format("H"))
 
 dayText.append(today)
 
