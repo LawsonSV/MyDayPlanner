@@ -3,4 +3,4 @@ In this assignment I created a day planner that saves text typed into each row i
 
 Link to screenshot: (https://user-images.githubusercontent.com/100011983/160269571-ba2b3f06-a826-4eae-b2c5-8fced321eb27.png)
 
-Link to delpoyed site: 
+Link to delpoyed site: https://lawsonsv.github.io/MyDayPlanner/
